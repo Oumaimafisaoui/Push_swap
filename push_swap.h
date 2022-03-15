@@ -10,17 +10,25 @@
 typedef struct structure
 {
     int *array;
-    int *a;
     int size;
     int top;
 
 }stacks;
 
-stacks  *ra(stacks *stack, int flag); 
+void    sort_two(stacks *stack); 
+
+void    sort_type(stacks *stack_a, stacks *stack_b, int args); 
+
+void    ra(stacks *stack, int flag); 
+
 int is_empty(stacks *st);
-stacks  *rra(stacks *stack, int flag);
-stacks *sa(stacks *stack, int flag);
-stacks *pa(stacks *stack_a, stacks *stack_b);
+
+void    rra(stacks *stack, int flag);
+
+void    sa(stacks *stack, int flag);
+
+void    pa(stacks *stack_a, stacks *stack_b);
+
 int peek(stacks *st,int index);
 
 int pop(stacks *stack);

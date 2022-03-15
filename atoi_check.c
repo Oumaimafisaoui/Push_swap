@@ -29,7 +29,7 @@ int atoi_check(const char *s)
         n = n * 10 + (*s - 48); 
         s++;
     }
-    if (*s != '\0' || (n > INT_MAX))
+    if (*s != '\0' || (n > INT_MAX)) //add the case mentioned by Nidal 
         error();
     return (n * sign);    
 }

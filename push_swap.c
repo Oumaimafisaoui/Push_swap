@@ -13,61 +13,6 @@ stacks *create_stacks(int l)
     return (stack);
 }
 
-int is_empty(stacks *st)
-{
- if(st->top==-1)
-    return 1;
- return 0;
-}
-
-void push(stacks *stack, int element)
-{
- if(stack->top == stack->size-1)
-    return ;
- else
- {
-    stack->top++;
-    stack->array[stack->top]=element;
- }
- 
-}
-
-void Display(stacks *stack)
-{
- int index;
-
- index=stack->top;
- while(index>=0)
- {
-    printf("%d ",stack->array[index]);
-    index--;
- }
-    printf("\n");
-}
-
-int pop(stacks *stack)
-{
- int x=-1;
- 
- if(stack->top==-1)
-    printf("Stack Underflow\n");
- else
- {
-    x=stack->array[stack->top--];
- }
- return x;
-}
-
-int peek(stacks *st,int index)
-{
- int x=-1;
- if(st->top-index+1<0)
-    printf("Invalid Index \n");
- x=st->array[st->top-index+1];
- return x;
-}
-
-
 int main(int argc, char **argv)
 {
     stacks *stack_a;
@@ -92,39 +37,27 @@ int main(int argc, char **argv)
         printf("Error\n");
         exit(0);
     }
-  
-    push(stack_a, 5);
-    push(stack_a, 7);
-    push(stack_a, 1);
-    push(stack_a, 0);
-
-   
-    push(stack_b, 1);
-    push(stack_b, 5);
-    push(stack_b, 7);
-    push(stack_b, 3);
-    push(stack_b, 9);
-
-   
     if(!is_sorted(stack_a))
     {
-        // sort_type(stack_a, stack_b);
-        // Display(stack_a);
-        // Display(stack_b);
-
-        // // pa(stack_a,stack_b);
-       
-        // Display(stack_a);
-        //  Display(stack_b);
-        // pa(stack_a, stack_b);
-        //  Display(stack_a);
-        // Display(stack_b);
-
-        printf("%d", pa(stack_a, stack_b));
-
+        Display(stack_a);
+        sort_type(stack_a, stack_b, argc -1);
+        Display(stack_a);
     }
-    
-
+        
     return (0);
 }   
 
+  
+    // push(stack_a, 5);
+    // push(stack_a, 7);
+    // push(stack_a, 1);
+    // push(stack_a, 0);
+
+   
+    // push(stack_b, 1);
+    // push(stack_b, 5);
+    // push(stack_b, 7);
+    // push(stack_b, 3);
+    // push(stack_b, 9);
+
+   
