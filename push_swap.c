@@ -24,7 +24,7 @@ int main(int argc, char **argv)
     args = argc - 1;
     stack_a = create_stacks(args);
     stack_b = create_stacks(args);
-    if(argc <= 2)
+    if(argc < 2)
         return (0);
     while(args) //put this in a function
     {

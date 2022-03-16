@@ -14,7 +14,7 @@ typedef struct structure
     int top;
 
 }stacks;
-
+void    sort_three(stacks *stack);
 void    sort_two(stacks *stack); 
 
 void    sort_type(stacks *stack_a, stacks *stack_b, int args); 
