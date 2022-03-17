@@ -18,7 +18,6 @@ int main(int argc, char **argv)
     stacks *stack_a;
     stacks *stack_b;
     int element;
-    int index;
     int args;
 
     args = argc - 1;

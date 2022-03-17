@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int is_digit(char n)
 {
@@ -11,10 +11,8 @@ int atoi_check(const char *s)
 {
     long long n;
     int sign;
-    int result;
 
     sign = 1;
-    result = 0;
     n = 0;
     if(*s == '-' || *s == '+')
     {

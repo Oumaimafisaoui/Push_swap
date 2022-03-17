@@ -3,12 +3,10 @@
 void    rrb(stacks *stack, int flag)
 {
     int len;
-    int index;
     int last;
 
     len = stack->size - 1;
     last = stack->array[len];
-    index = 0;
     
     while(len >= 0)
     {
