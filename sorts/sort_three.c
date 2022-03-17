@@ -5,14 +5,19 @@ void    sort_three(stacks *stack)
     int first;
     int second;
     int third;
-
-    first = stack->array[2];
-    //printf("]]]]]]%d", first);
-    second = stack->array[1];
-    third = stack->array[0];
+    else
+    {
+        first = stack->array[2];
+        //printf("]]]]]]%d", first);
+        second = stack->array[1];
+        third = stack->array[0];
+    }
     if (first > second && second < third && first < third)
     {
-          sa(stack, 1);
+        //sa(stack, 1);
+        //   ra(stack, 0);
+        //   ra(stackm 0);
+        //   printf("sa");
 
     }
     else if (first > second && first > third && second < third)

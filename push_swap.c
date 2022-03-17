@@ -40,7 +40,9 @@ int main(int argc, char **argv)
     {
         Display(stack_a);
         sort_type(stack_a, stack_b, argc -1);
+        //pop(stack_a);
         Display(stack_a);
+        //printf("[[%d]]\n", stack_a->array[3]);
     }
         
     return (0);
