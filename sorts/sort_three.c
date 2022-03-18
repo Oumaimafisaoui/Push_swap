@@ -5,13 +5,10 @@ void    sort_three(stacks *stack)
     int first;
     int second;
     int third;
-    else
-    {
         first = stack->array[2];
         //printf("]]]]]]%d", first);
         second = stack->array[1];
         third = stack->array[0];
-    }
     if (first > second && second < third && first < third)
     {
         //sa(stack, 1);

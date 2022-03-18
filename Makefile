@@ -9,9 +9,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 # Makefile settings
 NAME = push_swap
-PUSHSRC = sorts/sort_three.c sorts/sort_two.c \
-sorts/sort_type.c tools/atoi_check.c tools/error.c tools/is_duplicated.c \
-tools/is_sorted.c tools/stack_operations.c push_swap.c moves/pa.c \
+PUSHSRC = sorts/sort_three.c sorts/sort_two.c sorts/sort_type.c sorts/sort_5.c tools/atoi_check.c tools/error.c tools/is_duplicated.c \
+tools/is_sorted.c tools/stack_operations.c push_swap.c moves/pa.c sorts/min.c\
 moves/pb.c	moves/ra.c	moves/rb.c	moves/rr.c moves/sa.c \
 moves/sb.c	moves/ss.c	moves/rra.c moves/rrb.c moves/rrr.c
 HEADER = push_swap.h
@@ -19,7 +18,7 @@ HEADER = push_swap.h
 
 ############## The referencing #############
 
-#PUSHOBJ = $(PUSHSRC:.c=.o)
+PUSHOBJ = ${PUSHSRC:.c=.o}
 
 
 # UNIX-based OS variables & settings
@@ -35,12 +34,10 @@ all: $(NAME)
 
 # Builds the app
 
-%.o:%.c 
-		$(CC) $(CFLAGS) -c $<
-
 $(NAME)  : $(PUSHOBJ) $(HEADER)
-#$(CC) $(CFLAGS) -o $@ $(PUSHOBJ)
+	$(CC) $(CFLAGS) $(PUSHOBJ) -I $(HEADER) -o $(NAME)
 	echo "the project is cooking..."
+
 
 # Building rule for .o files and its .c
 

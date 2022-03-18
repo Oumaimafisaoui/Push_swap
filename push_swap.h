@@ -14,7 +14,7 @@ typedef struct structure
     int top;
 
 }stacks;
-
+void    sort_five(stacks *stack_a, stacks *stack_b, int n);
 void check_index2(int num, stacks *stack_a, stacks *stack_b);
 void    sort_three(stacks *stack);
 void    sort_two(stacks *stack);
@@ -36,6 +36,7 @@ void    pb(stacks *stack_a, stacks *stack_b);
 void    sort_five(stacks *stack_a, stacks *stack_b, int n);
 int     min_num(int *array, int len, int n);
 int peek(stacks *st,int index);
+void  ft_swap(int *a, int *b);
 
 int pop(stacks *stack);
 
