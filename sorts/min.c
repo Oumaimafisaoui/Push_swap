@@ -21,7 +21,6 @@ int     min_num(int *array, int len)
         }
         index++;
     }
-    printf("%d\n", num);
     return(num);
 }
 //the problem is that  it counds the index of the min after it pops out , it still remember it.

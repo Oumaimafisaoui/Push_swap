@@ -27,7 +27,6 @@ void check_index2(int num, stacks *stack_a, stacks *stack_b)
 
 }
 
-
 void    sort_four(stacks *stack_a, stacks *stack_b)
 {
     int num;

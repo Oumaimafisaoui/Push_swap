@@ -40,15 +40,14 @@ int main(int argc, char **argv)
   
 
     if(!is_sorted(stack_a))
-    {
-        Display(stack_a);
-        // printf("\n \n");
+
+         {
+// printf("\n \n");
         // Display(stack_b);
         // printf("\n \n");
         sort_type(stack_a, stack_b, argc -1);
         //rra(stack_a, 1);
         // printf("[[%d]]\n", stack_a->array[4]);
-        Display(stack_a);
         // printf("\n \n");
         // Display(stack_b);
         
