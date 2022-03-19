@@ -3,7 +3,7 @@
 void    pb(stacks *stack_a, stacks *stack_b)
 {
     int res;
-  
+
     if(!is_empty(stack_a))
     {
         res = pop(stack_a);

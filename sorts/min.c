@@ -1,26 +1,27 @@
 #include "../push_swap.h"
 
-int     min_num(int *array, int len, int n)
+int     min_num(int *array, int len)
 {
     int index;
     int min;
-    if (n == 1)
+    int num;
+
+   
+
+    index = 1;
+    num = 0;
+    min = array[0];
+
+    while(index  < len)
     {
-        index = 1;
-        min = array[1];
-    }
-    else
-    {
-        index = 0;
-        min = array[0];
-    }
-    while(index + 1 < len)
-    {
-        if(array[index + 1] < min)
-            min = array[index + 1];
+        if(array[index] <= min)
+        {
+            min = array[index];
+            num = index;
+        }
         index++;
     }
-    len = len - index - 1;
-    printf("[[[[[%d\n]]]]]", min);
-    return(len);
+    printf("%d\n", num);
+    return(num);
 }
+//the problem is that  it counds the index of the min after it pops out , it still remember it.

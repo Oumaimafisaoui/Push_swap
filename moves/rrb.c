@@ -3,17 +3,16 @@
 void    rrb(stacks *stack, int flag)
 {
     int len;
-    int last;
+    int max;
 
-    len = stack->size - 1;
-    last = stack->array[len];
-    
-    while(len >= 0)
+    max = stack->size - 1;
+    len = 1;
+
+    while(len <= max)
     {
-        stack->array[len] = stack->array[len - 1];
-        len--;
+        ft_swap(&stack->array[len], &stack->array[len - 1]);
+        len++;
     }
-    stack->array[0] = last;
     if(flag)
         printf("rrb\n");
 }

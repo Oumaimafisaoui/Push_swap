@@ -14,12 +14,12 @@ typedef struct structure
     int top;
 
 }stacks;
-void    sort_five(stacks *stack_a, stacks *stack_b, int n);
+void    sort_four(stacks *stack_a, stacks *stack_b);
+void    sort_five(stacks *stack_a, stacks *stack_b);
 void check_index2(int num, stacks *stack_a, stacks *stack_b);
 void    sort_three(stacks *stack);
 void    sort_two(stacks *stack);
 void check_index(int num, stacks *stack_a, stacks *stack_b);
-void    sort_five(stacks *stack_a, stacks *stack_b, int n);
 void    sort_type(stacks *stack_a, stacks *stack_b, int args);
 int is_empty(stacks *st);
 void    ra(stacks *stack, int flag); 
@@ -31,10 +31,9 @@ void    rra(stacks *stack, int flag);
 void    rrb(stacks *stack, int flag);
 void    sa(stacks *stack, int flag);
 void    rrr(stacks *stack);
-void    pa(stacks *stack_a, stacks *stack_b);
+void   pa(stacks *stack_a, stacks *stack_b);
 void    pb(stacks *stack_a, stacks *stack_b);
-void    sort_five(stacks *stack_a, stacks *stack_b, int n);
-int     min_num(int *array, int len, int n);
+int     min_num(int *array, int len);
 int peek(stacks *st,int index);
 void  ft_swap(int *a, int *b);
 

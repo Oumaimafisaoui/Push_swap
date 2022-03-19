@@ -7,7 +7,7 @@ int is_empty(stacks *st)
  return 0;
 }
 
-void push(stacks *stack, int element)
+void push(stacks *stack, int element) //increment top or size
 {
  if(stack->top == stack->size-1)
     return ;

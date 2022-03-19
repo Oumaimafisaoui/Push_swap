@@ -2,14 +2,7 @@
 
 void    sa(stacks *stack, int flag)
 {
-    int index;
-    int tmp;
-    index = stack->size - 1;
-
-    tmp = stack->array[index] ;
-    stack->array[index] =  stack->array[index - 1];
-    stack->array[index - 1] = tmp; 
-
+    ft_swap(&stack->array[stack->top], &stack->array[stack->top - 1]);
     if(flag)
         printf("sa\n");
 }
