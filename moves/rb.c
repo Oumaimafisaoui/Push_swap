@@ -16,13 +16,18 @@ void    rb(stacks *stack, int flag)
     // }
     // stack->array[len] = first;
 
-    int len = stack->size - 1;
+    int len;
+    int last;
 
-    while(len)
+    len = stack->top;
+    last = stack->array[len];
+    
+    while(len >= 0)
     {
-        ft_swap(&stack->array[len], &stack->array[len - 1]);
+        stack->array[len] = stack->array[len - 1];
         len--;
-    } 
+    }
+    stack->array[0] = last;
     if(flag)
         printf("rb\n");
 }

@@ -2,17 +2,20 @@
 
 void    rrb(stacks *stack, int flag)
 {
+   
     int len;
-    int max;
+    int index;
+    int first;
 
-    max = stack->size - 1;
-    len = 1;
-
-    while(len <= max)
+    first = stack->array[0];
+    index = 0;
+    len = stack->top;
+    while(index <= len)
     {
-        ft_swap(&stack->array[len], &stack->array[len - 1]);
-        len++;
+        stack->array[index] = stack->array[index + 1];
+        index++;
     }
+    stack->array[len] = first;
     if(flag)
         printf("rrb\n");
 }
