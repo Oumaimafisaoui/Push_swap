@@ -6,8 +6,6 @@ int     min_num(int *array, int len)
     int min;
     int num;
 
-   
-
     index = 1;
     num = 0;
     min = array[0];
@@ -23,4 +21,3 @@ int     min_num(int *array, int len)
     }
     return(num);
 }
-//the problem is that  it counds the index of the min after it pops out , it still remember it.

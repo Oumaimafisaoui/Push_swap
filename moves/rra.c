@@ -2,7 +2,6 @@
 
 void    rra(stacks *stack, int flag)
 {
-
     int len;
     int index;
     int first;
