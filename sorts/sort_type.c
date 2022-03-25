@@ -10,6 +10,6 @@ void    sort_type(stacks *stack_a, stacks *stack_b, int args)
             sort_four(stack_a, stack_b);
     if(stack_a->size == 5)
          sort_five(stack_a, stack_b);
-    // else
-    //     sort_big(stack_a, stack_b);
+     else
+         radix(stack_a, stack_b);
 }

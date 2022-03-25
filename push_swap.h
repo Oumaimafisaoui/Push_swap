@@ -14,12 +14,18 @@ typedef struct structure
     int top;
 
 }stacks;
+
+int	*insertion_sort(int *array, int args);
+int *indexing(int* sort, int *tmp, int args);
+stacks *sort_index(stacks *stack_a);
+void    radix(stacks *stack_a, stacks *stack_b);
+int	bits_count(stacks *stack_a);
+int     size_it(stacks *stack_a);
 void    sort_four(stacks *stack_a, stacks *stack_b);
 void    sort_five(stacks *stack_a, stacks *stack_b);
 void check_index2(int num, stacks *stack_a, stacks *stack_b);
 void    sort_three(stacks *stack);
 void    sort_two(stacks *stack);
-void check_index(int num, stacks *stack_a, stacks *stack_b);
 void    sort_type(stacks *stack_a, stacks *stack_b, int args);
 int is_empty(stacks *st);
 void    ra(stacks *stack, int flag); 

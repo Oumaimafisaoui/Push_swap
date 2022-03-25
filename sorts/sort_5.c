@@ -40,5 +40,5 @@ void    sort_five(stacks *stack_a, stacks *stack_b)
         check_index2(num, stack_a, stack_b);
         sort_three(stack_a);
         pa(stack_a, stack_b);
-        pa(stack_a, stack_b);      
+        pa(stack_a, stack_b); 
  }
