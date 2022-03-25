@@ -96,7 +96,7 @@ void    radix(stacks *stack_a, stacks *stack_b)
                 ++count; //count how many times we pushed the elements to b
             }
         }
-        ++count; //count how many times we
+        ++count; 
         while(--count)
             pa(stack_a, stack_b);
     }
