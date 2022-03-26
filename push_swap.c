@@ -33,12 +33,14 @@ int main(int argc, char **argv)
     }
     if(is_duplicated(stack_a) == 0)
     {
-        printf("Error\n");
-        exit(0);
+        //ft_putstr_fd("Error\n", 2);
+        //exit(1);
+        write(2, "Error\n", 6);
+        exit(1);
     }
     if(!is_sorted(stack_a))
     {
-         sort_type(stack_a, stack_b, argc -1);
+             sort_type(stack_a, stack_b, argc -1);
     } 
     return (0);
 } 

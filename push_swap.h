@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <string.h>
+#include <unistd.h>
 
 typedef struct structure
 {
@@ -14,7 +15,8 @@ typedef struct structure
     int top;
 
 }stacks;
-
+size_t	ft_strlen(const char *str);
+void    ft_putstr_fd(char *str, int fd);
 int	*insertion_sort(int *array, int args);
 int *indexing(int* sort, int *tmp, int args);
 stacks *sort_index(stacks *stack_a);

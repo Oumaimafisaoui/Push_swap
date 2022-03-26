@@ -2,6 +2,6 @@
 
 void error()
 {
-    printf("Error\n");
-    exit(0);
+    ft_putstr_fd("Error\n", 2);
+    exit(1);
 }
