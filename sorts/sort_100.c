@@ -75,31 +75,39 @@ int     size_it(stacks *stack_a)
 void    radix(stacks *stack_a, stacks *stack_b)
 {
     int bits;
-    int i;
-    int x = 0;
+    int index1;
+    int index2 = 0;
     int count = 0;
 
     sort_index(stack_a);
     bits = bits_count(stack_a); //this case 3
-    i = 0; //counter for bits
+    index1 = 0; //counter for bits
 
     //while(x++ < bits) //while we didn't reach the last bit
-    while(is_sorted(stack_a) == 0)
+    while(index1 < bits)
     {
-        // index2 = size_it(stack_a); //problem here
-        // while(index2-- >= 0) //while the elements are increasing
-        // {
-        //     if(stack_a->array[stack_a->top] & (1 << index1)) //if the number's right shift anding with one is zero put it in b
-        //         ra(stack_a, 1);
-        //     else
-        //     {
-        //         pb(stack_a, stack_b);
-        //         ++count; //count how many times we pushed the elements to b
-        //     }
-        // }
-        // ++count; 
-        // while(--count)
-        //     pa(stack_a, stack_b);
+        index2 = stack_a->size; //problem here
+        while(index2 > 0) //while the elements are increasing
+        {
+            if(stack_a->array[stack_a->top] & (1 << index1)) //if the number's right shift anding with one is zero put it in b
+                ra(stack_a, 1);
+            else
+            {
+                pb(stack_a, stack_b);
+                count++; //count how many times we pushed the elements to b
+            }
+            index2--;
+        }
+        ++count; 
+        while(count > 0)
+        {
+            pa(stack_a, stack_b);
+            count--;
+        }
+        index1++;
+    }
+
+}
         //****************************
         //          i = stack_a->size;
         //         //printf("0");
@@ -128,35 +136,36 @@ void    radix(stacks *stack_a, stacks *stack_b)
 		// x++;
     // }
     // Display(stack_a);
-            i = stack_a->size;
-                //printf("0");
-                while(i > 0)
-                {
-                  // printf("hhhhh");
-                   //printf("[%d]\n", x);
-                        if (stack_a->array[stack_a->top] & (1 << x))
-                        {
-                                //printf("[%d]\n", stack_a.arr[stack_a.t]);
-                                ra(stack_a, 1);
-                                //printf("ra\n");
-                        }
-                        else
-                        {
-                                pb(stack_a, stack_b);
-                                //printf("pb\n");
-                count++;
-                        }
-                        i--;
-                }
-                while(count > 0)
-                {
-                        pa(stack_a, stack_b);
-                        //printf("pa\n");
-            count--;
-                }
-                x++;
+    //***************************
+    //         i = stack_a->size;
+    //             //printf("0");
+    //             while(i > 0)
+    //             {
+    //               // printf("hhhhh");
+    //                //printf("[%d]\n", x);
+    //                     if (stack_a->array[stack_a->top] & (1 << x))
+    //                     {
+    //                             //printf("[%d]\n", stack_a.arr[stack_a.t]);
+    //                             ra(stack_a, 1);
+    //                             //printf("ra\n");
+    //                     }
+    //                     else
+    //                     {
+    //                             pb(stack_a, stack_b);
+    //                             //printf("pb\n");
+    //             count++;
+    //                     }
+    //                     i--;
+    //             }
+    //             while(count > 0)
+    //             {
+    //                     pa(stack_a, stack_b);
+    //                     //printf("pa\n");
+    //         count--;
+    //             }
+    //             x++;
  
-    }
+    // }
   //  Display(stack_a);
-}
+//}
 
